@@ -28,7 +28,7 @@ body {
 .container {
   background-color: var(--verydarkbluecard);
   width: 20rem;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 20px;
 }
 
@@ -55,13 +55,63 @@ body {
   width: 100%;
 }
 
+.container__content__img {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+}
+
+.container__content__img .eye {
+  width: 3rem;
+  position: relative;
+  bottom: 58%;
+  left: 42%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.container__content__img .overlay {
+  background-color: var(--cyan);
+  border-radius: 18px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  -webkit-transform: translate(-8%, -8%);
+          transform: translate(-8%, -8%);
+  width: 100%;
+  height: 100%;
+}
+
 .container__content__img img {
   border-radius: 15px;
   width: 100%;
 }
 
+.container__content__img:hover {
+  cursor: pointer;
+}
+
+.container__content__img:hover .overlay {
+  opacity: 0.4;
+}
+
+.container__content__img:hover .eye {
+  opacity: 1;
+}
+
 .container__content__description h2 {
   font-weight: 400;
+}
+
+.container__content__description h2:hover {
+  cursor: pointer;
+  color: var(--cyan);
 }
 
 .container__content__description p {
@@ -112,6 +162,11 @@ body {
 
 .container__content__profile p span {
   color: var(--soft-blue);
+}
+
+.container__content__profile p:hover {
+  cursor: pointer;
+  color: var(--cyan);
 }
 
 .container__content__profile img {
